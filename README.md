@@ -7,6 +7,7 @@ React redux chips in and helps to maintain state at the application level. React
 
 
 Let us learn about how to write a React application using React redux in this documentation.
+
 Concepts:
 React redux maintains the state of the application in a single place called Redux store. React components can get the latest state from the store as well change the state at any time. Redux provides a simple process to get and set the current state of the current application and now describe these concepts below.
 
@@ -76,8 +77,10 @@ const productUpdateReducer = (state = intailProductState, action) => {
 
 
 Redux-Middleware
-Middleware is some code you can put between the framework receiving a request, and the framework generating a response. For example, loggers help you with information about past, present and previous. The best feature of middleware is that it's composable in a chain. You can use multiple independent third-party middleware in a single project.
-People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more.
+
+
+Middleware is some code you can put between the framework receiving a request, and the framework generating a response. For example, loggers help you with information about past, present and previous. The best feature of middleware is that it's composable in a chain. You can use multiple independent third-party middleware in a single project.People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more.
+
 npm i redux-logger or yarn add redux-logger
 const store = createStore(Reducer, applyMiddleware(logger))
 
@@ -321,6 +324,7 @@ const CounterView = () => {
 export default CounterView;
 
 For using @redux-Toolkit you should create an App folder under src folder and keep the  store.js or store.jsx file under the App folder.
+
 import { configureStore } from "@reduxjs/toolkit";
 import counterReducer from "../features/counters/CounterSlice";
 //this toolkit is used for store the data import from @reduxjs/toolkit
